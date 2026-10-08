@@ -1,0 +1,25 @@
+{
+  "name": "omp-magpie-remote",
+  "version": "1.0.0",
+  "description": "Connect oh-my-pi to a remote Magpie gateway",
+  "type": "module",
+  "keywords": ["omp-plugin", "omp-package"],
+  "omp": {
+    "extensions": ["./index.ts"]
+  },
+  "peerDependencies": {
+    "@oh-my-pi/pi-ai": "*",
+    "@oh-my-pi/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@oh-my-pi/pi-ai": "18.8.4",
+    "@oh-my-pi/pi-coding-agent": "18.8.4",
+    "@types/bun": "1.3.4",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "bun test test/*.test.ts",
+    "smoke": "bun test ./test/smoke.ts"
+  }
+}
