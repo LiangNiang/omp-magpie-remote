@@ -94,5 +94,6 @@ export default function (pi: ExtensionAPI): void {
 	}
 
 	pi.on("session_start", (_event, ctx) => void updateStatus(ctx));
+	pi.on("turn_start", (_event, ctx) => void updateStatus(ctx));
 	pi.on("agent_end", (_event, ctx) => void updateStatus(ctx));
 }
